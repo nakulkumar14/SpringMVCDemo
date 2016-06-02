@@ -13,5 +13,8 @@
     <input type="text" name="empId">
     <input type="submit">
 </form>
+
+<a href="getAllEmployees">Get All Employees</a>
+
 </body>
 </html>
