@@ -1,6 +1,9 @@
 package com.springapp.mvc;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by nakulkumar on 2/6/16.
@@ -11,7 +14,10 @@ public class Employee implements Serializable {
 
     private String firstname;
     private String lastname;
-    //    private Date dob;
+
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    private Date dob;
+
     private Integer empId;
 
     public String getFirstname() {
@@ -30,13 +36,13 @@ public class Employee implements Serializable {
         this.lastname = lastname;
     }
 
-//    public Date getDob() {
-//        return dob;
-//    }
-//
-//    public void setDob(Date dob) {
-//        this.dob = dob;
-//    }
+    public Date getDob() {
+        return dob;
+    }
+
+    public void setDob(Date dob) {
+        this.dob = dob;
+    }
 
     public Integer getEmpId() {
         return empId;
@@ -51,7 +57,7 @@ public class Employee implements Serializable {
         return "Employee{" +
                 "firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
-//                ", dob=" + dob +
+                ", dob=" + dob +
                 ", empId=" + empId +
                 '}';
     }
